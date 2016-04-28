@@ -235,8 +235,9 @@ nav{
 	}
 }
 
-/*sec 1==============================================================================================0*/
-.sec-home-1{//sec-1
+/*==================== sec 1 ====================*/
+/*sec-1*/
+.sec-home-1{
 	background: @main-color;
 	width: 100%;
 	margin-top: -10px;
@@ -249,7 +250,7 @@ nav{
 			padding:0 0 97px 0;
 			font-style: normal;
 			font-size: 50px;
-		}
+		}//end title-1
 	
 	.text-orange{
 		color:@orange;
@@ -261,19 +262,18 @@ nav{
 
 	.sec-1-a{
 		margin-left: 170px;
-
 			.active-circle:after{
 							content: '';
 							height: 0;
 							width: 0;
 							border:solid transparent;
 							border-width: 30px;
-							position: absolute;
+							position: absolute;/*overlapin*/
 							top:-3px;
 							left: ~'calc(50% - 30px)';
 							z-index:2;
 							border-top-color:@main-color;
-			}//.active-circle:after
+			}
 						
 			.circle{
 					.border-radius();
@@ -282,7 +282,6 @@ nav{
 					display: inline-block;
 					width: 259px;
 					height: 259px;
-					position: relative;
 					margin-bottom: 160px;
 					.opacity();
 					&:hover{
@@ -293,29 +292,27 @@ nav{
 						border:2px solid @main-color;
 						.opacity(@opacity:1);
 							> ul.firts-list{
-								color:white;
+								color: @white;
 							}
-
-						&:after{
-							content: '';
-							height: 0;
-							width: 0;
-							border:solid transparent;
-							border-width: 30px;
-							position: absolute;
-							top:-3px;
-							left: ~'calc(50% - 30px)';
-							z-index:2;
-							border-top-color:@main-color;
-							z-index: 1000px;
-						}
+							&:after{
+								content: '';
+								height: 0;
+								width: 0;
+								border:solid transparent;
+								border-width: 30px;
+								position: absolute;
+								top:-3px;
+								left: ~'calc(50% - 30px)';
+								z-index:2;
+								border-top-color:@main-color;
+								z-index: 1000px;
+							}
 					}
-
 						.firts-list{
 							color:@dark-main-color;
 							text-align: center;
 							display: inline-block;
-							position: relative;
+							position: relative;/*overlapin*/
 							top:~"calc(50% - 50px)";
 							left: 5px;
 
@@ -328,8 +325,8 @@ nav{
 								}
 
 								.li-2{
-									position: relative;
-									left: -18px;
+									position: relative;/*overlapin*/
+									left: -19px;
 									font-family: "Lily";
 									text-transform: uppercase;
 									font-size: 20px;
@@ -337,14 +334,14 @@ nav{
 								}
 														
 								.icons{
-									position: relative;
+									position: relative;/*overlapin*/
 									right: 0px;
 									text-align: center;
 									display: inline-block;
 									padding-bottom: 30px;
 								}
 
-						}//end .firts-list		
+						}		
 			}/*end circle*/
 
 		.c-1{
@@ -360,7 +357,7 @@ nav{
 					width: 0;
 					border:solid transparent;
 					border-width: 30px;
-					position: absolute;
+					position: absolute;/*overlapin*/
 					top:-3px;
 					left: ~'calc(50% - 30px)';
 					z-index:2;
@@ -388,8 +385,11 @@ nav{
 			color:@white;
 		}
 	}/*end sec-1-a*/
-}//end sec-1
+}
+/*==================== end sec 1 =================*/
 
+
+/*==================== sec 2 ====================*/
 .sec-home-2{
 	background: @orange;
 		div{
@@ -407,7 +407,6 @@ nav{
 		div.div{
 				border-right: 1px solid #f07f65;
 				top:15px;
-				position: relative;
 				margin: 0px 0 160px 0;
 
 				ul{
@@ -415,12 +414,12 @@ nav{
 					list-style: none;
 					padding: 0;
 						li:first-child{
-						color:@white;
-						font-family: "Lily";
-						text-align:center;
-						font-style: italic;
-						font-size: 50px;
-						padding: 0;
+							color:@white;
+							font-family: "Lily";
+							text-align:center;
+							font-style: italic;
+							font-size: 50px;
+							padding: 0;
 						}
 
 						li:nth-child(2){
@@ -428,23 +427,22 @@ nav{
 							text-align: center;
 							color:@white;
 							text-transform: uppercase;
-							position: relative;
-							top:-90px;
+							position: relative;/*pixel perfect*/
+							top:-90px;/*pixel perfect*/
 							padding: 0;
 							font-size: 17px;
 						}
 
-						li{
-							p{
-								font-family: "Champagne";
-								text-align: center;
-								color:#f3abbc;
-								padding-top: 0;
-								margin-top: 0;
-								padding: 0;
-								top:-55px;
-								position: relative;
-							}
+						li:nth-child(3){
+							
+							font-family: "Champagne";
+							text-align: center;
+							color:#f3abbc;
+							margin-top: 0;
+							padding: 0;
+							top:-55px;/*pixel perfect required;*/
+							position: relative;/*pixel perfect required;*/
+
 						}
 
 						li:nth-child(4){
@@ -466,23 +464,24 @@ nav{
 				}//end ul
 		}//end div
 
-	}//end sec-home-2
+	}
+/*====================end sec 2 =================*/
 
 
+/*====================sec 3 ====================*/
 .sec-home-3{
 	background: @main-color;
 	color:@white;
-		div > ul{
-				list-style: none;
-				padding: 0;
-				margin:0;
+		div > ul.who{
+			list-style: none;
+			padding: 0;
+			margin:0;
 				>li:nth-child(1){
-					h1{
+					h2{
 						font-family: "Champagne";
-						margin-top: 122px;
-						left: ~'-62px';
-						position: relative;
+						margin: 122px 0 25px 170px;
 						font-style: normal;
+						font-size: 30px;
 					}
 				}
 
@@ -502,7 +501,6 @@ nav{
 						}
 						li:nth-child(2){
 							width: 230px;
-							position: relative;
 							margin: 20px;
 						}
 					}
@@ -512,66 +510,62 @@ nav{
 							font-family: "Lily";
 							font-size: 30px;
 							font-style: italic;
-							margin-left: 312px;
+							margin: 0 0 178px 312px;
 							width: 69px;
-							margin-bottom: 178px;
 							&:hover{
 								cursor: pointer;
 								color:@dark-main-color;
 							}
 						}
-		}//primera lista
+			}//primera lista
 
-		div > ul:nth-child(2){
-			list-style: none;
-			padding: 0;
-			margin:0;
-				>li:nth-child(1){
-				h1{
-					font-family: "Champagne";
-					margin-top: 122px;
-					position: relative;
-					font-style: normal;
-					margin-left: -300px;
-				}
-			}
 
-			>li:nth-child(2){
-				color:@dark-main-color;
-				margin-left: -141px;
-				margin-bottom: 82px;
-			}
-			> li:nth-child(3){
-				> ul.list-3-b{
-					list-style: none;
-					margin:0;
-					li{
-						display: inline-block;
-						list-style: none;
-					}
-					li:nth-child(2){
-						width: 230px;
-						position: relative;
-						margin: 20px;
-					}
-				}
-		}
-
-		> li:nth-child(4){
-						font-family: "Lily";
+			div > ul:nth-child(2){
+				list-style: none;
+				padding: 0;
+				margin:0;
+					>li:nth-child(1){
+					h2{
+						font-family: "Champagne";
+						margin-top: 122px;
+						font-style: normal;
 						font-size: 30px;
-						font-style: italic;
-						padding: 10px 0 0 0;
-						margin-left: 183px;
-						width: 69px;
-						margin-bottom: 178px;
-						&:hover{
-							cursor: pointer;
-							color:@dark-main-color;
-						}
-
 					}
-	}// end div > ul:nth-child(2)
+				}
+
+				>li:nth-child(2){
+					color:@dark-main-color;
+					margin-bottom: 82px;
+				}
+
+				> li:nth-child(3){
+					> ul.list-3-b{
+						list-style: none;
+						margin:0;
+						li{
+							display: inline-block;
+							list-style: none;
+						}
+						li:nth-child(2){
+							width: 230px;
+							margin: 20px;
+						}
+					}
+			}
+
+			> li:nth-child(4){
+							font-family: "Lily";
+							font-size: 30px;
+							font-style: italic;
+							padding: 10px 0 0 0;
+							margin: 0 0 178px 183px;
+							width: 69px;
+							&:hover{
+								cursor: pointer;
+								color:@dark-main-color;
+							}
+						}
+			}
 
 
 }/*en sec-home-3*/
@@ -584,9 +578,7 @@ nav{
 
 	.div-1{
 		padding-left: 348px;
-		position: relative;
 			ul{
-				position: relative;
 				list-style: none;
 					> li{
 							color:@dark-main-color;
@@ -598,26 +590,23 @@ nav{
 					}
 
 			}
-	}//.div-1
+	}
 
 	.div-2{
-		position: relative;
 		padding-left: 93px;
 			ul{
-				position: relative;
 				list-style: none;
 				margin-bottom: 46px;
 					> li{
-							color:@dark-main-color;
-								i{
-								padding-left: 50px;
-								margin:72px 0 36px 0;
-								color:@orange;
-								} 
+						color:@dark-main-color;
+							i{
+							padding-left: 50px;
+							margin:72px 0 36px 0;
+							color:@orange;
+							} 
 					}
 			}
-
-	}//.div-2
+	}
 
 
 	h1{
@@ -626,22 +615,18 @@ nav{
 	p{
 		color:@dark-main-color;
 		text-align: center;
-		position: relative;
-		top:-10px;
 		padding: 0;
 		margin-bottom:60px;
 	}
 
 	.arrow{
-		position: relative;
-		margin-bottom: 83px;
+		margin: 0 auto 83px;
 		.opacity();
 			&:hover{
 				.opacity(@opacity:1);
 				cursor: pointer;
 			}
 	}
-
 }
 .bottom-4:after{
 		content: '';
@@ -651,6 +636,8 @@ nav{
 		.full-width()
 }
 	
+
+
 /*break points================================================================*/
 
 @media @screen-xs{
@@ -662,8 +649,11 @@ nav{
 		}
 	}
 	.sec-home-1{
+		.row-title-1{
+				margin-top: 10px;
+			}
 		.sec-1-a{
-
+			
 			.circle{
 				.firts-list{
 					.icons{
@@ -685,7 +675,6 @@ nav{
 			}
 		}
 
-
 		.icons{
 			right: 0px;
 		}
@@ -697,7 +686,7 @@ nav{
 						line-height: 70px;
 					}
 			}
-
+		
 	 	.sec-1-a {
 	 		.c-1,
 	 		.c-2,
@@ -708,10 +697,10 @@ nav{
 	 		}
 
 	 		.circle{
-				position: relative;
+				position: relative;/*overlapin*/
 				left: ~'calc(50% - 220px)';
 				margin: 0;
-				padding: 0,
+				padding: 0;
 			}
 
 			.c-1{
@@ -731,10 +720,8 @@ nav{
 				.title-2{
 					line-height: 70px;
 					font-size: 50px;
-					margin-top:0px;
-					margin-bottom: 100px;
+					margin-bottom: 0;
 				}
-
 			}//end div
 
 			div.div{
@@ -757,10 +744,9 @@ nav{
 				div{
 					> ul.who{//ul primero
 						> li:nth-child(1){
-							h1{
+							h2{
 								text-align: center;
-								margin-left: 100px;
-								margin-bottom: 80px;
+								margin:50px 0 0 0;
 								line-height: 50px;
 							}
 						}
@@ -770,7 +756,7 @@ nav{
 							width: 220px;
 							left: ~"calc(50% - 110px)";
 							text-align: center;
-							position: relative;
+							position: relative;/*pixel perfect*/
 						}
 
 						> li:nth-child(3){
@@ -781,8 +767,7 @@ nav{
 								li{
 									display: inline-block;
 									list-style: none;
-									margin-left: 20px;
-									margin-bottom: 0;
+									margin: 20px 0 0;
 									padding: 0;
 									
 								}
@@ -803,7 +788,7 @@ nav{
 						}//child-3
 
 						> li:nth-child(4){
-							margin-left: 20px;
+							margin:0 0 10px 20px;
 						}
 					}//termina ul primero
 
@@ -811,9 +796,10 @@ nav{
 
 					> ul.what{
 						> li:nth-child(1){
-							> h1{
-								margin-left: 100px;
+							> h2{
+								margin:50px 0 0 0;
 								line-height: 50px;
+								text-align: center;
 							}
 						}//primer li
 
@@ -823,7 +809,6 @@ nav{
 							left: ~"calc(50% - 110px)";
 							text-align: center;
 							position: relative;
-							margin-top: 80px;
 							margin-bottom:79px; 
 						}
 
@@ -832,11 +817,11 @@ nav{
 								list-style: none;
 								padding: 0px;
 								margin:0;
+								
 								li{
 									display: inline-block;
 									list-style: none;
-									margin-left: 20px;
-									margin-bottom: 0;
+									margin: 0 0 0 20px;
 									padding: 0;
 								}
 
@@ -849,15 +834,13 @@ nav{
 								
 								li:nth-child(2){
 									width: 50px;
-									position: relative;
 									margin: 20px;
 								}
 							}
 						}//child-3
 
 						> li:nth-child(4){
-							margin-left: 20px;
-							margin-bottom: 105px;
+							margin:0 0 105px 20px;
 						}
 					}//termina what
 
@@ -867,8 +850,7 @@ nav{
 	}//sec-3
 
 	.sec-home-3 div > ul:nth-child(2) > li:nth-child(2){
-		margin-left:0px;
-		margin-bottom: 0px;	
+		margin:0px;
 	}
 
 	.sec-home-4{
@@ -886,19 +868,19 @@ nav{
 			}
 
 			>.div-2{
-				position: relative;
 				padding: 0px;
 				font-size: 8px;
+
 					> ul{
 						width: 130px;
 						padding: 0;
-						margin-top: 8px;
-						margin-left: 20px;
+						margin: 8px 0 0 20px;
 						left: ~"calc(50% - 80px)";
 							i{
 								padding-left:36px;
 							}
 					}
+			
 			}
 		}
 	}//sec-home-4
@@ -933,8 +915,7 @@ nav{
 					
 				}
 				.c-1{
-					margin-left: 115px;
-					margin-bottom: 0;
+					margin:0 0 0 115px;
 				}
 
 				.c-2{
@@ -942,11 +923,8 @@ nav{
 				}
 
 				.c-3{
-					margin-left: 219px;
-					margin-bottom: 100px;
+					margin:0 0 100px 219px;
 				}
-			
-
 			}//sec-1-a
 		}//end sec-home-1
 
@@ -960,23 +938,39 @@ nav{
 			}
 		}/*end sec-home-2*/
 
+
 		.sec-home-3 {
 			div{
 
 				> ul.who{
+					
+
+					> li:nth-child(1){
+						>h2{
+							margin-left: 20px;
+						}
+					} //child-1
+
+					> li:nth-child(2){
+						margin-left: 20px;
+						padding: 0;
+					}//child-2
+
 					> li:nth-child(3){
+
 						> ul.list-3-a{
 							padding-left: 20px;
 						}
-					}
+					}//child-3
+
 					> li:nth-child(4){
 						margin-left: 20px;
-					}
+					}//child-4
 				}
 
 				> ul.what{
 					> li:nth-child(1){
-						margin-left: 250px;
+						margin:122px 0 25px 0;
 					}
 					> li:nth-child(4){
 						margin-left: 20px;
@@ -992,7 +986,6 @@ nav{
 					padding-left: 62px;
 				}
 			}
-			
 		}/*end sec-home-4*/
 
 }//end media-sm
@@ -1023,8 +1016,7 @@ nav{
 					
 				}
 				.c-1{
-					margin-left: 271px;
-					margin-bottom: 0;
+					margin:0 0 0 271px;
 				}
 
 				.c-2{
@@ -1032,17 +1024,13 @@ nav{
 				}
 
 				.c-3{
-					margin-left: 378px;
-					margin-bottom: 100px;
+					margin-left:0 0 100px 378px;
 				}
 			
-
 			}//sec-1-a
 		}//sec-home-1
 
 		.sec-home-2 {
-			
-
 			div.div:nth-child(2){
 				> ul {
 					> li:nth-child(4){
@@ -1066,8 +1054,6 @@ nav{
 					}
 				}
 
-
-
 				> ul.what{
 					> li:nth-child(1){
 						margin-left: 250px;
@@ -1078,7 +1064,6 @@ nav{
 				}
 			}
 
-			
 		}/*end sec-home-3*/
 
 		.sec-home-4 {
@@ -1091,3 +1076,23 @@ nav{
 		}/*end sec-home-4*/
 
 }//end  md-screen
+
+@media @screen-md-desktop-2{
+	.sec-home-1{
+			.sec-1-a{
+				margin: 50px;
+				
+				.c-1{
+					margin:0 0 0 271px;
+				}
+
+				.c-2{
+					margin-bottom: 0;
+				}
+
+				.c-3{
+					margin:0 0 100px 370px;
+				}
+			}//sec-1-a
+		}//sec-home-1
+}

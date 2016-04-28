@@ -14,6 +14,8 @@
 @main-color : #323a45;
 @dark-main-color : #68707b;
 
+
+
 .sec-blog-1{
 	padding-top: 55px;
 }
@@ -24,18 +26,17 @@
 .sec-blog-1,
 .sec-blog-2{
 	background: @orange;
-	position: relative;
 
-
-	.h1{
-	font-family: "Champagne";
-	font-style: normal;
-	font-size: 42px;
+	.h{
+		font-family: "Champagne";
+		font-style: normal;
+		font-size: 42px;
+		color:white;
+		margin-left: 100px;
 	}
 
 .list-a{
 	list-style: none;
-	position: relative;
 	margin-top: 97px;
 	
 		>li > span.n27{
@@ -46,9 +47,8 @@
 			padding-bottom: 0;
 			margin-bottom: 0;
 		}
-		
+
 		>li > span.march{
-			position: absolute;
 			margin-top:-40px;
 			color:white;
 			margin-left: 20px;
@@ -59,14 +59,13 @@
 			margin-left: 100px;
 		}
 
+
 		>li:nth-child(3){
-			position: relative;
 			padding-top: 280px;
 			color:white;
 		}
 
 		>li:nth-child(4){
-			position: relative;
 			padding-top: -150px;
 			color:white;
 			font-family: "Lily";
@@ -83,7 +82,6 @@
 	.list-blog-check-a{
 		color:#fcc9bc;
 		margin-top: 100px;
-		position: relative;
 		list-style: none;
 		margin-left: 110px;
 			>li{
@@ -104,32 +102,37 @@
 @media @screen-xs{
 	.sec-blog-1,
 	.sec-blog-2{
+	.h{
+		text-align: center;
+		padding:0;
+		margin: 0;
+	}
 
 	.list-a{
 		>li > span.n27{
 			width: 96px;
-			left:~"calc(50% - 48px)";
-			position: relative;
+			left:~"calc(50% - 48px)";/*pixel perfect*/
+			position: relative;/*pixel perfect*/
 		}
 
 		>li > span.march{
 			idth: 96px;
-			left:~"calc(50% - 48px)";
-			position: absolute;
+			left:~"calc(50% - 48px)";/*pixel perfect*/
+			position: absolute;/*pixel perfect*/
 		}
 
 		>li:nth-child(2){
-			position: absolute;
+			position: absolute;/*pixel perfect*/
 			width: 215px;
-			left:~"calc(50% + -90px)";
+			left:~"calc(50% + -90px)";/*pixel perfect*/
 			padding: 0;
 			margin: 0;
 		}
 
 		>li:nth-child(3){
 			width: 215px;
-			left:~"calc(50% - 107px)";
-			position: relative;
+			left:~"calc(50% - 107px)";/*pixel perfect*/
+			position: relative;/*pixel perfect*/
 			padding-top: 250px;
 		}
 
@@ -142,34 +145,37 @@
 			>li{
 				margin-bottom: 10px;
 			}
-		}
-
 	}
+}
 	
 }//end screen-xs
 
 
 @media @screen-sm-table{
 	.sec-blog-1{
-		.h1{
-			margin-left: 145px;
-			position: relative;
-		}
+
+	.h{
+		text-align: center;
+		padding:0;
+		margin: 0;
+	}
 
 		div{
 			>#blog{
-				position: relative;
-				margin-left: -129px;
+				position: relative;/*pixel perfect*/
+				margin-left: -129px;/*pixel perfect*/
 				}
 			}
 		}
 
 		.sec-blog-2{
-		.h1{
-			margin-left: 100px;
-			position: relative;
-			margin-top: 120px;
+		.h{
+			text-align: center;
+		padding:0;
+		margin: 0;
 		}
+
+		
 	}//sec-blog-1
 	}//
 
