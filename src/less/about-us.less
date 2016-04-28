@@ -4,10 +4,6 @@
 @color-textHover:#68707b;
 /* /.Variables */
 
-.text-center{
-	text-align: center;
-}
-
 /* Mixins */
 .title-style(){
 	font-family: 'Champagne';
@@ -55,7 +51,7 @@
 		margin-top: 80px;
 	}
 
-	#parrafoUno{
+	.parrafoUno{
 		color: @color-text;
 		margin-top: 100px;
 		font-size: 18px;
@@ -78,7 +74,7 @@
 		.col-xs-12,.col-md-12,.col-sm-12{
 			text-align: center;
 		}
-		#parrafoUno{
+		.parrafoUno{
 		margin:10px 0 0 0;
 		padding: 15px;
 		}
@@ -93,7 +89,6 @@
 /* ------ /.About-sec Part1 ------ */
 
 /* ------- About-sec2 Part2 ------- */
-
 .about-sec2{
 	height: auto;
 
@@ -161,10 +156,6 @@
 		background: rgb(104,112,123,1);
 	}
 
-	.img-thumbnail{
-		background: transparent;
-	}
-
 	/* Responsive */
 	@media all and (min-width:1320px){
 			.logos-about{
@@ -190,6 +181,15 @@
 			left: ~'-ms-calc(48% - 70px)';
 			left: ~'-o-calc(48% - 70px)';
 			left: ~'calc(48% - 70px)';
+		}
+	}
+
+	@media all and (min-width:768px) and (max-width:959px){
+		.circles-styleUno{
+			margin-left: 2.333%;
+		}
+		.circles-styleDos{
+			margin-left: 4.333%;
 		}
 	}
 
@@ -256,5 +256,4 @@
 		}
 	}
 } 
-
 /* ------- /.About-sec2 Part2 ------- */
